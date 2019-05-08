@@ -2,8 +2,8 @@
   session_start();
 
   if (isset($_SESSION['usuarioAcceso'])) {                // Preguntamos si la sesion fue iniciada
-      echo 'Bienvenido! ' . $_SESSION['usuarioLogin'];   // de ser así imprimimos el valor de $_SESSION['admin']
-      echo '<br/>' . '<a href="cerrar.php">Cerrar Sesión</a>';    // enlace para cerrar sesion
+      echo 'Bienvenido! ' . $_SESSION['usuarioAcceso'];   // de ser así imprimimos el valor de $_SESSION['admin']
+      echo '<br/>' . '<a href="setting/cerrar-conexion.php">Cerrar Sesión</a>';    // enlace para cerrar sesion
       echo '<br/>';
   } else {                            // caso contrario, si no hay sesion iniciada redirije a index.php
       header('location:login.php');   // redireccionar al index.php
