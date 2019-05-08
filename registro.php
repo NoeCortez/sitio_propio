@@ -25,6 +25,8 @@
         </font>
     </h1>
     <form class="needs-validation form-registering" action="registro-bd.php" method="POST" novalidate>
+    
+    <!-- NOMBRE DEL USUARIO -->
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">Nombre</label>
@@ -33,6 +35,8 @@
           ¡Se ve bien!
         </div>
       </div>
+
+      <!-- APELLIDO DEL USUARIO -->
       <div class="col-md-4 mb-3">
         <label for="validationCustom02">Apellido</label>
         <input type="text" class="form-control" id="validationCustom02" name="apellidoReg"placeholder="Apellido" value="Otto" required>
@@ -40,6 +44,8 @@
           ¡Se ve bien!
         </div>
       </div>
+
+      <!-- USUARIO -->
       <div class="col-md-4 mb-3">
         <label for="validationCustomUsername">Usuario</label>
         <div class="input-group">
@@ -53,6 +59,16 @@
         </div>
       </div>
     </div>
+
+    <!-- CORREO DEL USUARIO -->
+    <div class="form-group row">
+        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+        <div class="col-md-12">
+          <input type="email" class="form-control form-control-lg" id="colFormLabelLg" name="emailReg" placeholder="Ingresa tu correo electronico">
+        </div>
+      </div>
+
+      <!-- CONTRASEÑA UNO -->
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom03">Contraseña</label>
@@ -63,6 +79,7 @@
         </div>
       </div>
       
+      <!-- CONTRASEÑA DOS -->
       <div class="col-md-6 mb-3">
         <label for="validationCustom04">Validando contraseña</label>
         <input type="text" class="form-control" id="validationCustom04" name="contra2Reg" placeholder="Ingresa nuevamente la contraseña" required>
@@ -81,6 +98,8 @@
       </div>
       -->
     </div>
+
+    <!-- CHECKBOX -->
     <div class="form-group">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
