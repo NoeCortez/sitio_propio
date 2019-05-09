@@ -23,6 +23,7 @@
     var_dump($resultado);           // mostramos valores de la variable $resultado
     if ($resultado) {
         echo '<br/> El USUARIO ingresado ya existe!';
+        header('location:registro.php');
         die();
     }
 
@@ -51,8 +52,10 @@
         /* Comprobando que se haya ingresado el usuario a la base de datos */
         if ($sentencia_agregar->execute(array($name_complete_user, $email_usuario_nuevo, $usuario_contra_nueva, $usuario_nuevo))) {
             echo '<br/>Agregado Exitosamente!'.'<br/>';
+            header('location:index.php');
         } else {
             echo '<br/>Error al agregar'.'<br/>';
+            header('location:login.php');
         }
 
         /* Cerrando conexion base de datos y sentencia */
@@ -63,4 +66,5 @@
 
     } else {
         echo '¡La contraseña no es válida';
+        header('location:login.php');
     }

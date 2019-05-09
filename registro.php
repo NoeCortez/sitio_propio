@@ -111,7 +111,8 @@
         </div>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Registrarse</button>
+    <button class="btn btn-primary espacio-bajo" type="submit">Registrarse</button>
+    <div><a href="login.php" class="enlace-block">Iniciar Sesión</a></div>
   </form>
 
   <script>
