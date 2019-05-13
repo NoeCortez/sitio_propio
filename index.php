@@ -1,8 +1,18 @@
 <?php
   session_start();
 
+  include_once 'setting/conexion.php';
+
   if (isset($_SESSION['usuarioAcceso'])) {                // Preguntamos si la sesion fue iniciada
-      echo 'Bienvenido! ' . $_SESSION['usuarioAcceso'];   // de ser así imprimimos el valor de $_SESSION['admin']
+      $usuario_view = $_SESSION['usuarioAcceso'];   // de ser así imprimimos el valor de $_SESSION['usuarioAcceso']
+
+      $sql_view = 'SELECT * FROM tabla1 WHERE usuario = ?';
+      $sentencia_view = $pdo->prepare($sql_view);
+      $sentencia_view->execute(array($usuario_view));
+      $result_view = $sentencia_view->fetch();
+
+      echo '<h1>Bienvenido, ' . $result_view['nombre'] . '</h1>';
+      
       echo '<br/>' . '<a href="setting/cerrar-conexion.php">Cerrar Sesión</a>';    // enlace para cerrar sesion
       echo '<br/>';
   } else {                            // caso contrario, si no hay sesion iniciada redirije a index.php
